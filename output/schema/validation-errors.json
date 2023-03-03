@@ -666,9 +666,11 @@
     },
     "engine.delete": {
       "request": [
-        "Missing request & response"
+        "Request: should not have a body"
       ],
-      "response": []
+      "response": [
+        "response definition engine.delete:Response / body / instance_of - Non-leaf type cannot be used here: '_types:AcknowledgedResponseBase'"
+      ]
     },
     "engine.get": {
       "request": [
@@ -678,7 +680,7 @@
     },
     "engine.list": {
       "request": [
-        "Missing request & response"
+        "Request: should not have a body"
       ],
       "response": []
     },

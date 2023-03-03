@@ -8762,11 +8762,25 @@ export interface DanglingIndicesListDanglingIndicesResponse {
   dangling_indices: DanglingIndicesListDanglingIndicesDanglingIndex[]
 }
 
+export interface EngineDeleteRequest extends RequestBase {
+  engine_id: Name
+}
+
+export type EngineDeleteResponse = AcknowledgedResponseBase
+
 export interface EngineGetRequest extends RequestBase {
   engine_id: Name
 }
 
 export type EngineGetResponse = Engine
+
+export interface EngineListRequest extends RequestBase {
+  q?: string
+  from?: integer
+  size?: integer
+}
+
+export type EngineListResponse = Engine
 
 export interface EnginePutRequest extends RequestBase {
   engine_id: Name

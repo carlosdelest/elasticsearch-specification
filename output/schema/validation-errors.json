@@ -664,6 +664,30 @@
         "response definition _global.delete_script:Response / body / instance_of - Non-leaf type cannot be used here: '_types:AcknowledgedResponseBase'"
       ]
     },
+    "engine.delete": {
+      "request": [
+        "Missing request & response"
+      ],
+      "response": []
+    },
+    "engine.get": {
+      "request": [
+        "Request: should not have a body"
+      ],
+      "response": []
+    },
+    "engine.list": {
+      "request": [
+        "Missing request & response"
+      ],
+      "response": []
+    },
+    "engine.put": {
+      "request": [
+        "Missing request & response"
+      ],
+      "response": []
+    },
     "enrich.delete_policy": {
       "request": [
         "Request: should not have a body"

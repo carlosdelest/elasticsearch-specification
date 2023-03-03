@@ -1958,6 +1958,17 @@ export interface EmptyObject {
   [key: string]: never
 }
 
+export interface Engine extends EngineBase {
+  name: Name
+  engine_alias: IndexName
+  updated_at_millis: EpochTime<UnitMillis>
+}
+
+export interface EngineBase {
+  indices: IndexName[]
+  analytics_collection_name?: Name
+}
+
 export type EpochTime<Unit = unknown> = Unit
 
 export interface ErrorCauseKeys {
@@ -8750,6 +8761,12 @@ export interface DanglingIndicesListDanglingIndicesRequest extends RequestBase {
 export interface DanglingIndicesListDanglingIndicesResponse {
   dangling_indices: DanglingIndicesListDanglingIndicesDanglingIndex[]
 }
+
+export interface EngineGetRequest extends RequestBase {
+  engine_id: Name
+}
+
+export type EngineGetResponse = Engine
 
 export interface EnrichPolicy {
   enrich_fields: Fields

@@ -8768,6 +8768,16 @@ export interface EngineGetRequest extends RequestBase {
 
 export type EngineGetResponse = Engine
 
+export interface EnginePutRequest extends RequestBase {
+  engine_id: Name
+  create?: boolean
+  body?: EngineBase
+}
+
+export interface EnginePutResponse {
+  result: Result
+}
+
 export interface EnrichPolicy {
   enrich_fields: Fields
   indices: Indices
